@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.conteiner-main {
+  background-color: rgba(14, 14, 11, 0.9019607843);
+  background-image: url(../img/spacejoy-9M66C_w_ToM-unsplash.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: color-dodge;
+}
+.conteiner-main::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.conteiner-main .cont-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr;
+  height: 60vh;
+  background-color: rgb(85, 85, 85);
+}
+.datos .cont-icon {
+  grid-row: 1/2;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+.datos .cont-icon img {
+  height: 200px;
+}/*# sourceMappingURL=main.css.map */
