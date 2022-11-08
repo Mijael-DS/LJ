@@ -30,22 +30,42 @@
   }
   
 }
-
+section {
+  background-color: rgba(85, 85, 85, 1);
+  
+}
 .datos  {
   display: grid;
   grid-template-columns: 1fr  1fr 1fr;
   grid-template-rows: 2fr;
   height: 60vh;
-  background-color: rgba(85, 85, 85, 1);
   .cont-icon  {
     grid-row: 1/2;
     padding: 1rem;
     text-align: center;
     box-shadow: 0 15px 25px rgba(0,0,0,0.50);
+    background-color: rgba(85, 85, 85, 1);
+    transition: all 1s;
+    
+    &:hover {
+      scale: 0.9;
+      transition: all 1s;
+      background-color: white;
+
+    }
     
     img {
       height: 200px;
     }
   }
 
+}
+
+@media (max-width: 700px) {
+  .datos  {
+    display: flex;
+    flex-direction: column;
+
+    
+  }
 }
