@@ -12,6 +12,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: color-dodge;
+  z-index: -99999;
   &::before {
     content: '';
     position: absolute;
@@ -20,37 +21,72 @@
     bottom: 0;
     right: 0;
     left: 0;
-  }
+  } 
+  
   .cont-main {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 90vh;
+    position: relative; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
+    width: auto;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    h1 {
+      color: white;
+    }
+    p {
+      color: rgb(241, 200, 171);
+    }
+    a {
+      text-decoration: none;
+      color: gray;
+    }
   }
   
 }
+
 section {
   background-color: rgba(85, 85, 85, 1);
   
-}
-.datos  {
-  display: grid;
-  grid-template-columns: 1fr  1fr 1fr;
-  grid-template-rows: 2fr;
-  height: 60vh;
-  .cont-icon  {
-    grid-row: 1/2;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 15px 25px rgba(0,0,0,0.50);
-    background-color: rgba(85, 85, 85, 1);
-    transition: all 1s;
+  .datos  {
+    /* display: grid;
+    grid-template-columns: 1fr  1fr 1fr;
+    grid-template-rows: 2fr; */
+    display: flex;
+    /* justify-content: space-around; */
+    .cont-icon  {
+      /* grid-row: 1/2; */
+      height: 60vh;
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+      background-color: rgba(85, 85, 85, 1);
+      transition: all 1s;
+      box-shadow: 0 15px 25px rgba(0,0,0,0.50);
+      h3 {
+        color: white;
+      }
+      p {
+        color: white;
+      }
+
     
     &:hover {
       scale: 0.9;
       transition: all 1s;
       background-color: white;
+      box-shadow: 0 15px 25px rgba(0,0,0,0.50);
+      h3 , p {
+        color: black;
+        transition: all 1s;
+      }
 
     }
     
@@ -60,12 +96,15 @@ section {
   }
 
 }
+}
 
 @media (max-width: 700px) {
-  .datos  {
-    display: flex;
-    flex-direction: column;
+   .datos  {
+    /* display: flex;
+    flex-direction: column; */
+    flex-wrap: wrap;
+    
 
     
-  }
+  } 
 }

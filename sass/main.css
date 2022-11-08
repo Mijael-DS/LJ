@@ -12,6 +12,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: color-dodge;
+  z-index: -99999;
 }
 .conteiner-main::before {
   content: "";
@@ -23,43 +24,76 @@
   left: 0;
 }
 .conteiner-main .cont-main {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 90vh;
+  position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80%;
+  width: auto;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.conteiner-main .cont-main h1 {
+  color: white;
+}
+.conteiner-main .cont-main p {
+  color: rgb(241, 200, 171);
+}
+.conteiner-main .cont-main a {
+  text-decoration: none;
+  color: gray;
 }
 
 section {
   background-color: rgb(85, 85, 85);
 }
-
-.datos {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 2fr;
-  height: 60vh;
+section .datos {
+  /* display: grid;
+  grid-template-columns: 1fr  1fr 1fr;
+  grid-template-rows: 2fr; */
+  display: flex;
+  /* justify-content: space-around; */
 }
-.datos .cont-icon {
-  grid-row: 1/2;
+section .datos .cont-icon {
+  /* grid-row: 1/2; */
+  height: 60vh;
+  width: 100%;
   padding: 1rem;
   text-align: center;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
   background-color: rgb(85, 85, 85);
   transition: all 1s;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 }
-.datos .cont-icon:hover {
+section .datos .cont-icon h3 {
+  color: white;
+}
+section .datos .cont-icon p {
+  color: white;
+}
+section .datos .cont-icon:hover {
   scale: 0.9;
   transition: all 1s;
   background-color: white;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 }
-.datos .cont-icon img {
+section .datos .cont-icon:hover h3, section .datos .cont-icon:hover p {
+  color: black;
+  transition: all 1s;
+}
+section .datos .cont-icon img {
   height: 200px;
 }
 
 @media (max-width: 700px) {
   .datos {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=main.css.map */
